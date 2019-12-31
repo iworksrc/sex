@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  time: any = '';
+
+  showMe($event: CustomEvent) {
+    this.time = $event.detail;
+  }
 }

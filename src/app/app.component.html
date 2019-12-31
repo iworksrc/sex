@@ -3,5 +3,10 @@
   Material works okay
 </button>
 
+<div (time-stream)="showMe($event)">
+  <app-stopwatch></app-stopwatch>
+</div>
+
 <div>
+  <h1>{{time | date: 'dd.MM.yyy hh.mm.ss' }}</h1>
 </div>
