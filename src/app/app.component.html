@@ -1,24 +1,25 @@
-<button mat-raised-button>
-  <mat-icon class="green">android</mat-icon>
-  Material works okay
-</button>
+<!--<button mat-raised-button>-->
+  <!--<mat-icon class="green">android</mat-icon>-->
+  <!--Material works okay-->
+<!--</button>-->
 
-<div (time-stream)="showMe($event)">
-  <app-stopwatch></app-stopwatch>
-</div>
+<!--<div (time-stream)="showMe($event)">-->
+  <!--<app-stopwatch></app-stopwatch>-->
+<!--</div>-->
 
-<div>
-  <h1>{{time | date: 'dd.MM.yyy hh.mm.ss' }}</h1>
-</div>
+<!--<div>-->
+  <!--<h1>{{time | date: 'dd.MM.yyy hh.mm.ss' }}</h1>-->
+<!--</div>-->
 
-<div>
-  <h1>bug from child two is: {{bug_from_child}}</h1>
-</div>
+<!--<div>-->
+  <!--<h1>bug from child two is: {{bug_from_child}}</h1>-->
+<!--</div>-->
 
-<app-comment #childOne>
-  Cool app bro
-</app-comment>
+<!--<app-comment #childOne>-->
+  <!--Cool app bro-->
+<!--</app-comment>-->
 
-<app-comment #childTwo (bug)="bug_from_child = $event">
-  I found a bug
-</app-comment>
+<!--<app-comment #childTwo (bug)="bug_from_child = $event">-->
+  <!--I found a bug-->
+<!--</app-comment>-->
+<router-outlet></router-outlet>

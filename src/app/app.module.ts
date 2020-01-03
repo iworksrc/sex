@@ -6,7 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
 
 import { AppComponent } from './app.component';
-import { AuthModule } from './modules/+auth/auth.module';
+// import { AuthModule } from './modules/+auth/auth.module';
+import { MainModule } from './modules/+main/main.module';
 
 
 @NgModule({
@@ -15,11 +16,12 @@ import { AuthModule } from './modules/+auth/auth.module';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     MaterialModule,
     SharedModule,
-    AuthModule
+    // AuthModule,
+    MainModule
   ],
   providers: [],
   bootstrap: [AppComponent]
