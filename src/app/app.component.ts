@@ -7,7 +7,6 @@ import {CommentComponent} from './modules/+shared/components/comment/comment.com
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
-  title = 'app';
   time: any = '';
   @ViewChild('childOne') childOne: CommentComponent;
   @ViewChild('childTwo') childTwo: CommentComponent;
