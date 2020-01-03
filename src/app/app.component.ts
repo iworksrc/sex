@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, ViewChild} from '@angular/core';
-import {CommentComponent} from './+modules/shared/components/comment/comment.component';
+import {CommentComponent} from './modules/+shared/components/comment/comment.component';
 
 @Component({
   selector: 'app-root',
