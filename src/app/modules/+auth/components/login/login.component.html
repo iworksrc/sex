@@ -1,3 +1,45 @@
-<p>
-  login works!
-</p>
+<div class="container-login">
+
+<section>
+<form #loginForm
+      class="login-form"
+      [formGroup]="formModel"
+      (ngSubmit)="submit()"
+>
+  <mat-form-field class="inpit-field">
+    <input
+      matInput
+      placeholder="Login"
+      formControlName="login"
+      type="text"
+    >
+  </mat-form-field>
+
+  <mat-form-field class="inpit-field">
+    <input
+      matInput
+      placeholder="Pasword"
+      formControlName="password"
+      type="password"
+    >
+  </mat-form-field>
+
+  <button mat-button>OK</button>
+</form>
+</section>
+
+<section>
+<div class="foreign-login">
+  <div class="provider">
+    <img width="50" height="50" src="" alt="google login">
+  </div>
+  <div class="provider">
+    <img width="50" height="50" src="" alt="facebook login">
+  </div>
+  <div class="provider">
+    <img width="50" height="50" src="" alt="github login">
+  </div>
+</div>
+</section>
+
+</div>

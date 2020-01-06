@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { StopwatchComponent } from './components/stopwatch/stopwatch.component';
 import { CommentComponent } from './components/comment/comment.component';
 import { AuthGuard } from './guards/auth.guard';
+import { ApiService } from './services/api.service';
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { AuthGuard } from './guards/auth.guard';
     StopwatchComponent,
     CommentComponent
   ],
-  providers: [AuthGuard]
+  providers: [AuthGuard, ApiService]
 })
 export class SharedModule { }
