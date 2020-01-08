@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, NgModel, Validators} from '@angular/forms';
 import {LoginService} from '@src/app/modules/+auth/services/login.service';
 import {IAuthToken} from '@shared/models/interfaces/login/auth-token';
 import {Router} from '@angular/router';
+import {LocalStorageService} from '@shared/services/local-storage.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private loginService: LoginService
+    private loginService: LoginService,
+    private localStorageService: LocalStorageService
   ) {
   }
 
@@ -55,6 +57,6 @@ export class LoginComponent implements OnInit {
   }
 
   private saveToken(token: IAuthToken) {
-
+    this.localStorageService.setAuthToken(token);
   }
 }

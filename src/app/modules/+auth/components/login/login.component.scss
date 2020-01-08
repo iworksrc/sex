@@ -1,0 +1,28 @@
+.container-login {
+  width: 33%;
+  text-align: center;
+  border: #64ff6e 2px solid;
+  border-radius: 15px;
+  contain: layout;
+}
+
+.provider {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+#github-logo {
+  width: 75px;
+  height: 75px;
+  padding: 15px 0 0 15px;
+}
+
+.divider {
+  text-align: center;
+  margin: 40px 0 40px 0;
+}
+
+.foreign-login {
+  text-align: center;
+}
