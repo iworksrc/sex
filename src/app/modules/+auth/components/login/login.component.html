@@ -6,7 +6,7 @@
       [formGroup]="formModel"
       (ngSubmit)="submit()"
 >
-  <mat-form-field class="inpit-field">
+  <mat-form-field class="input-field">
     <input
       matInput
       placeholder="Login"
@@ -16,7 +16,7 @@
     <mat-error *ngIf="formModel.controls['login'].errors">{{'login fuckup'}}</mat-error>
   </mat-form-field>
 
-  <mat-form-field class="inpit-field">
+  <mat-form-field class="input-field">
     <input
       matInput
       placeholder="Pasword"
