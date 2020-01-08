@@ -1,16 +1,15 @@
 {
   "users": [
     {
-      "admin": {
         "fio": "Иванов И.И.",
+        "login": "admin",
         "password": "prived"
-      }
+
     },
     {
-      "zerocool": {
         "fio": "noname",
+        "login": "zerocool",
         "password": "frYtd000"
-      }
     }
   ]
 }

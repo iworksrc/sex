@@ -14,14 +14,25 @@ export class LoginService {
 
   tryLogin(login: string, password: string): Observable<IAuthToken> {
     return this.apiService
-      .post('route to login api', {login, password})
+      .post('./assets/users.json', {login, password})
       .map((response: IApiResponse) => {
         if (response.status.isOk) {
-          return response.data;
+
+          if(this.checkAuth(response.data.users, login, password)) {
+            return <IAuthToken>{token: '20a07fae972f3a322063c396a2ef858b79ec07f3', token_type: 'Bearer'} //response.data;
+          } else {
+            console.log('not mach user');
+            return null;
+          }
+
         } else {
           console.log('login failed');
           return response.data;
         }
       });
+  }
+
+  private checkAuth(data: any, login: string, password: string): boolean {
+    return !!data.find(user => login === user.login && password === user.password);
   }
 }
