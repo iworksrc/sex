@@ -1,58 +1,77 @@
-<div class="container-login">
-
-<section>
-<form #loginForm
-      class="login-form"
-      [formGroup]="formModel"
-      (ngSubmit)="submit()"
->
-  <mat-form-field class="input-field">
-    <input
-      matInput
-      placeholder="Login"
-      formControlName="login"
-      type="text"
-    >
-    <mat-error *ngIf="formModel.controls['login'].errors">{{'login fuckup'}}</mat-error>
-  </mat-form-field>
-
-  <mat-form-field class="input-field">
-    <input
-      matInput
-      placeholder="Pasword"
-      formControlName="password"
-      type="password"
-    >
-    <mat-error *ngIf="formModel.controls['password'].errors">{{'password fuckup'}}</mat-error>
-  </mat-form-field>
+<div class="container">
+  <div class="row">
 
 
-  <mat-error *ngIf="
-  formModel.controls['login'].hasError('fuckup') &&
-  formModel.controls['password'].hasError('fuckup')"
-  >{{'Not match any user, login fail'}}</mat-error>
-  <button mat-button>OK</button>
-</form>
-</section>
 
-  <div class="divider">or</div>
+    <div class="col" align="center">
 
-<section>
-<div class="foreign-login">
-  <div class="provider">
-    <img src="assets/imgs/logos/google.svg" alt="google login">
+    <section>
+      <form #loginForm
+          class="login-form"
+          [formGroup]="formModel"
+          (ngSubmit)="submit()"
+      >
+      <div class="row">
+        <div class="col">
+          <div style="width: 120px">
+
+            <mat-form-field class="input-field">
+              <input
+                matInput
+                placeholder="Login"
+                formControlName="login"
+                type="text"
+              >
+              <mat-error *ngIf="formModel.controls['login'].errors">{{'login fuckup'}}</mat-error>
+            </mat-form-field>
+
+              <mat-form-field class="input-field mt-3">
+                <input
+                  matInput
+                  placeholder="Pasword"
+                  formControlName="password"
+                  type="password"
+                >
+                <mat-error *ngIf="formModel.controls['password'].errors">{{'password fuckup'}}</mat-error>
+              </mat-form-field>
+          </div>
+
+              <!--<mat-error *ngIf="-->
+              <!--formModel.controls['login'].hasError('fuckup') &&-->
+              <!--formModel.controls['password'].hasError('fuckup')"-->
+              <!--&gt;{{'Not match any user, login fail'}}</mat-error>-->
+
+          <div style="width: 50px">
+            <button type="submit" class="btn btn-primary btn-lg mt-4">OK</button>
+          </div>
+        </div>
+
+      </div>
+
+    </form>
+    </section>
+
+    <div class="divider">or</div>
+
+    <section>
+    <div class="foreign-login">
+      <div class="provider">
+        <img src="assets/imgs/logos/google.svg" alt="google login">
+      </div>
+      <div class="provider">
+        <img src="assets/imgs/logos/facebook.svg" alt="facebook login">
+      </div>
+      <!--<div class="provider">-->
+        <!--&lt;!&ndash;<img style="width: 100px; height: 100px;" src="assets/imgs/logos/github.png" alt="github login">&ndash;&gt;-->
+        <!--<img id="github-logo" src="assets/imgs/logos/github-logo.svg" alt="github login">-->
+      <!--</div>-->
+      <div class="provider">
+        <img src="assets/imgs/logos/vk.svg" alt="vk login">
+      </div>
+    </div>
+    </section>
+
+    </div>
+
   </div>
-  <div class="provider">
-    <img src="assets/imgs/logos/facebook.svg" alt="facebook login">
-  </div>
-  <!--<div class="provider">-->
-    <!--&lt;!&ndash;<img style="width: 100px; height: 100px;" src="assets/imgs/logos/github.png" alt="github login">&ndash;&gt;-->
-    <!--<img id="github-logo" src="assets/imgs/logos/github-logo.svg" alt="github login">-->
-  <!--</div>-->
-  <div class="provider">
-    <img src="assets/imgs/logos/vk.svg" alt="vk login">
-  </div>
-</div>
-</section>
-
 </div>

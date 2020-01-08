@@ -5,6 +5,7 @@ import { SharedModule } from '@shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
+import { ButtonsModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 // import { AuthModule } from './modules/+auth/auth.module';
@@ -21,6 +22,7 @@ import { MainModule } from './modules/+main/main.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    ButtonsModule.forRoot(),
     SharedModule,
     // AuthModule,
     MainModule
