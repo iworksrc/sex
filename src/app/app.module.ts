@@ -6,11 +6,33 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
 import { ButtonsModule } from 'ngx-bootstrap';
+import {
+  SocialLoginModule,
+  AuthServiceConfig,
+  GoogleLoginProvider,
+  FacebookLoginProvider,
+} from "angular5-social-login";
+
 
 import { AppComponent } from './app.component';
 // import { AuthModule } from './modules/+auth/auth.module';
 import { MainModule } from './modules/+main/main.module';
 
+export function getAuthServiceConfigs() {
+  let config = new AuthServiceConfig(
+    [
+      {
+        id: FacebookLoginProvider.PROVIDER_ID,
+        provider: new FacebookLoginProvider("Your-Facebook-app-id")
+      },
+      {
+        id: GoogleLoginProvider.PROVIDER_ID,
+        provider: new GoogleLoginProvider("Your-Google-Client-Id")
+      },
+    ]
+  );
+  return config;
+}
 
 @NgModule({
   declarations: [
